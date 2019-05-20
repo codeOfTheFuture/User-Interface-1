@@ -138,30 +138,220 @@ table {
   align-items: center;
   justify-content: center;
 }
-.section-home .container {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.6rem;
+}
+@media (min-width: 768px) {
+  .navbar {
+    font-size: 18rem;
+  }
+}
+.navbar .toggle {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+.navbar .hamburger {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  background-color: dodgerblue;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .navbar .hamburger {
+    display: none;
+  }
+}
+.navbar .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.navbar .hamburger > div:before,
+.navbar .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -12px;
+  width: 100%;
+  height: 4px;
+  background: white;
+}
+.navbar .hamburger > div:after {
+  top: 12px;
+}
+.navbar .toggle:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+.navbar .toggle:checked + .hamburger > div:before,
+.navbar .toggle:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.navbar .toggle:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+.navbar .toggle:checked ~ .nav {
+  visibility: visible;
+}
+.navbar .toggle:checked ~ .nav > div {
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+.navbar .toggle:checked ~ .nav > div > div {
+  opacity: 1;
+  transition: opacity 0.75s ease;
+}
+.navbar .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .navbar .nav {
+    visibility: visible;
+    align-items: flex-start;
+  }
+}
+.navbar .nav > div {
+  background: dodgerblue;
+  opacity: 0.75;
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+@media (min-width: 768px) {
+  .navbar .nav > div {
+    transform: scale(1);
+    border-radius: 0;
+    width: 100%;
+    height: 6rem;
+    flex: auto;
+    transition: none;
+    justify-content: flex-start;
+  }
+}
+.navbar .nav > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+@media (min-width: 768px) {
+  .navbar .nav > div > div {
+    opacity: 1;
+    max-width: 100%;
+    max-height: 6rem;
+    transition: none;
+  }
+}
+.navbar .nav > div > div ul {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .navbar .nav > div > div ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0 3rem;
+  }
+}
+.navbar .nav > div > div ul li {
+  list-style: none;
+  color: white;
+  font-size: 1.5em;
+  padding: 1em;
+}
+@media (min-width: 768px) {
+  .navbar .nav > div > div ul li {
+    padding: 0;
+    font-size: 1.4rem;
+  }
+}
+.navbar .nav > div > div ul li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+@media (min-width: 768px) {
+  .navbar .nav > div > div ul li a {
+    padding: 0 2rem;
+  }
+}
+.section-home .container {
   max-width: 80%;
   margin: auto;
   overflow: hidden;
   padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .section-home .container .main-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
+  font-family: 'Lato', sans-serif;
   margin: 3rem 0;
 }
 .section-home .container .secondary-heading {
-  font-size: 2.8rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 3.2rem;
+  text-align: center;
 }
 .section-home .container p {
   font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
   margin: 3rem 2rem;
+}
+.section-home .container .button {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  padding: 2rem 5rem;
+  background-color: dodgerblue;
+  border: 1px solid dodgerblue;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
 }
 .section-features .container {
   max-width: 80%;
@@ -172,8 +362,10 @@ table {
   padding: 4rem 0;
 }
 .section-features .container h1 {
+  font-family: 'Lato', sans-serif;
   font-size: 2.4rem;
   margin: 4rem 0;
+  text-align: center;
 }
 .section-features .container .features {
   display: flex;
@@ -181,11 +373,36 @@ table {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .section-features .container .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .section-features .container .features .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 80%;
   height: 40%;
+  margin-bottom: 2rem;
   padding: 3rem;
   border: 2px solid black;
+}
+@media (min-width: 768px) {
+  .section-features .container .features .feature {
+    width: 40%;
+    height: 25vh;
+  }
+}
+.section-features .container .features .feature h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+}
+.section-features .container .features .feature p {
+  font-family: 'Roboto', sans-serif;
+  padding: 2rem;
 }
 .section-about .container {
   max-width: 80%;
