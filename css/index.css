@@ -143,13 +143,6 @@ table {
   top: 0;
   left: 0;
   z-index: 1;
-  font-family: 'Lato', sans-serif;
-  font-size: 2.6rem;
-}
-@media (min-width: 768px) {
-  .navbar {
-    font-size: 18rem;
-  }
 }
 .navbar .toggle {
   position: absolute;
@@ -246,7 +239,7 @@ table {
 }
 .navbar .nav > div {
   background: #1b98e0;
-  opacity: 0.95;
+  opacity: 0.98;
   border-radius: 50%;
   width: 200vw;
   height: 200vw;
@@ -296,23 +289,26 @@ table {
 }
 .navbar .nav > div > div ul li {
   list-style: none;
-  font-size: 1.5em;
-  padding: 1em;
+  padding: 3rem;
 }
 @media (min-width: 768px) {
   .navbar .nav > div > div ul li {
-    padding: 0;
     height: 100%;
-    font-size: 1.4rem;
+    padding: 0;
   }
 }
 .navbar .nav > div > div ul li a {
-  color: #13293d;
+  font-size: 3.8rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #e8f1f2;
   text-decoration: none;
   transition: color 0.5s ease;
 }
 @media (min-width: 768px) {
   .navbar .nav > div > div ul li a {
+    font-size: 1.8rem;
+    font-weight: normal;
     padding: 0 2rem;
     color: #e8f1f2;
   }
@@ -385,12 +381,11 @@ table {
   margin: auto;
   overflow: hidden;
   padding-top: 8rem;
-  font-size: 1.6rem;
   padding: 4rem 0;
 }
 .section-features .container h1 {
   font-family: 'Lato', sans-serif;
-  font-size: 2.4rem;
+  font-size: 3.6rem;
   margin: 4rem 0;
   text-align: center;
 }
@@ -404,16 +399,13 @@ table {
   .section-features .container .features {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 }
 .section-features .container .features .feature {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
   height: 40%;
-  margin-bottom: 2rem;
   padding: 3rem;
   border: 2px solid black;
 }
@@ -425,10 +417,11 @@ table {
 }
 .section-features .container .features .feature h2 {
   font-family: 'Lato', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .section-features .container .features .feature p {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
   padding: 2rem;
 }
 .section-about .container {
@@ -469,6 +462,7 @@ table {
     display: flex;
     flex-direction: row;
     height: 100%;
+    margin-top: 4rem;
   }
 }
 .section-about .container .about .tabs {
@@ -490,13 +484,16 @@ table {
   padding: 1rem;
   margin: 1rem 1.4rem;
   font-size: 1.8rem;
+  border-radius: 5px;
 }
 .section-about .container .about .tabs .tab-link-selected {
-  border: 1px solid #13293d;
+  background-color: #247ba0;
+  color: #e8f1f2;
 }
 .section-about .container .about .tab-items {
-  width: 75%;
-  padding: 2rem 0;
+  width: 100%;
+  height: 50%;
+  margin: 0 2rem;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items {
@@ -504,29 +501,34 @@ table {
     margin-bottom: 8rem;
   }
 }
-.section-about .container .about .tab-items .tab-item {
-  padding: 2rem 0;
-}
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item {
     display: none;
   }
 }
 .section-about .container .about .tab-items .tab-item .img {
-  margin: 1.7rem 0;
-  width: 75px;
-  height: 75px;
+  margin: 2rem 0;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: grey;
 }
 .section-about .container .about .tab-items .tab-item h2 {
   font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
   padding: 2rem 0;
+  border-top: 1px solid #247ba0;
+  border-bottom: 1px solid #247ba0;
+  border-right: 1px solid #247ba0;
+  width: 100%;
 }
 .section-about .container .about .tab-items .tab-item p {
   font-family: 'Roboto', sans-serif;
+  line-height: 2rem;
   padding: 2rem;
-  border: 1px solid #13293d;
+  border-bottom: 1px solid #247ba0;
+  border-left: 1px solid #247ba0;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item-selected {

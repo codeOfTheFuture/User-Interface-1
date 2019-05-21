@@ -4,12 +4,12 @@
   top: 0;
   left: 0;
   z-index: 1;
-  font-family: @font-main;
-  font-size: 2.6rem;
+  // font-family: @font-main;
+  // font-size: 2.8rem;
 
-  @media (min-width: 768px) {
-    font-size: 18rem;
-  }
+  // @media (min-width: 768px) {
+  //   font-size: 18rem;
+  // }
 
   .toggle {
     position: absolute;
@@ -117,7 +117,7 @@
 
   .nav > div {
     background: @color-primary;
-    opacity: 0.95;
+    opacity: 0.98;
     border-radius: 50%;
     width: 200vw;
     height: 200vw;
@@ -166,21 +166,24 @@
 
       li {
         list-style: none;
-        font-size: 1.5em;
-        padding: 1em;
+        padding: 3rem;
 
         @media (min-width: 768px) {
-          padding: 0;
           height: 100%;
-          font-size: 1.4rem;
+          padding: 0;
         }
 
         a {
-          color: @color-secondary;
+          font-size: 3.8rem;
+          font-family: @font-main;
+          font-weight: bold;
+          color: @color-info;
           text-decoration: none;
           transition: color 0.5s ease;
 
           @media (min-width: 768px) {
+            font-size: 1.8rem;
+            font-weight: normal;
             padding: 0 2rem;
             color: @color-info;
           }
