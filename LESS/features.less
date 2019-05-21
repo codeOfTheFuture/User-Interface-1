@@ -1,0 +1,47 @@
+// Features Page Styles
+.section-features .container {
+  .container-styles;
+  font-size: 1.6rem;
+  padding: 4rem 0;
+  h1 {
+    font-family: @font-main;
+    font-size: 2.4rem;
+    margin: 4rem 0;
+    text-align: center;
+  }
+  .features {
+    .flex-column-center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      height: 40%;
+      margin-bottom: 2rem;
+      padding: 3rem;
+      border: 2px solid black;
+
+      @media (min-width: 768px) {
+        width: 40%;
+        height: 25vh;
+      }
+
+      h2 {
+        font-family: @font-main;
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-family: @font-text;
+        padding: 2rem;
+      }
+    }
+  }
+}

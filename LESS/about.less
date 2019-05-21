@@ -1,0 +1,95 @@
+// About Us Styles
+.section-about .container {
+  .container-styles;
+  .flex-column-center;
+  font-size: 1.6rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+
+  h1 {
+    font-family: @font-main;
+    font-size: 3.6rem;
+
+    @media (min-width: 768px) {
+      height: 100%;
+    }
+  }
+
+  .about {
+    .flex-column-center;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+
+    .tabs {
+      width: 25%;
+      height: 50%;
+      display: none;
+
+      @media (min-width: 768px) {
+        .flex-column-center;
+        margin-bottom: 5rem;
+      }
+
+      .tab-links {
+        .tab-link {
+          @media (min-width: 768px) {
+            padding: 2rem 3rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .tab-items {
+      width: 75%;
+      padding: 2rem 0;
+
+      @media (min-width: 768px) {
+        padding: 0;
+        margin-bottom: 8rem;
+      }
+
+      .tab-item {
+        padding: 2rem 0;
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+
+        .img {
+          margin: 1.7rem 0;
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          background: grey;
+        }
+
+        h2 {
+          font-family: @font-main;
+          padding: 2rem 0;
+        }
+
+        p {
+          font-family: @font-text;
+          padding: 2rem;
+          border: 1px solid @color-secondary;
+        }
+      }
+
+      .tab-item-selected {
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
