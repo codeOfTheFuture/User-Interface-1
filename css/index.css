@@ -487,8 +487,12 @@ table {
 }
 .section-about .container .about .tabs .tab-link {
   cursor: pointer;
-  padding: 2rem 3rem;
+  padding: 1rem;
+  margin: 1rem 1.4rem;
   font-size: 1.8rem;
+}
+.section-about .container .about .tabs .tab-link-selected {
+  border: 1px solid #13293d;
 }
 .section-about .container .about .tab-items {
   width: 75%;
