@@ -341,7 +341,11 @@ table {
   align-items: center;
   justify-content: center;
 }
-.section-home .container .main-heading {
+.section-home .container .logo {
+  display: flex;
+  align-items: center;
+}
+.section-home .container .logo .main-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,7 +390,7 @@ table {
 .section-features .container h1 {
   font-family: 'Lato', sans-serif;
   font-size: 3.6rem;
-  margin: 4rem 0;
+  margin: 6rem 0;
   text-align: center;
 }
 .section-features .container .features {
@@ -406,13 +410,17 @@ table {
   flex-direction: column;
   justify-content: center;
   height: 40%;
-  padding: 3rem;
-  border: 2px solid black;
+  padding: 2rem;
+  border: 1px solid #247ba0;
+  border-radius: 5px;
 }
 @media (min-width: 768px) {
   .section-features .container .features .feature {
     width: 40%;
-    height: 25vh;
+    height: 150px;
+  }
+  .section-features .container .features .feature img {
+    padding: 5rem;
   }
 }
 .section-features .container .features .feature h2 {
@@ -423,6 +431,16 @@ table {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   padding: 2rem;
+}
+.section-features .container .feature:nth-child(1) {
+  background-color: #247ba0;
+  color: #e8f1f2;
+  border-radius: 5px;
+}
+.section-features .container .feature:nth-child(4) {
+  background-color: #247ba0;
+  color: #e8f1f2;
+  border-radius: 5px;
 }
 .section-about .container {
   max-width: 80%;
