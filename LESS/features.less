@@ -1,11 +1,36 @@
 // Features Page Styles
+.section-features {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom right,
+    @primary-bg-transparent,
+    @primary-bg-solid
+  );
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 .section-features .container {
   .container-styles;
-  font-size: 1.6rem;
+
   padding: 4rem 0;
   h1 {
     font-family: @font-main;
-    font-size: 2.4rem;
+    font-size: 3.6rem;
+    font-weight: bold;
     margin: 4rem 0;
     text-align: center;
   }
@@ -15,33 +40,75 @@
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
+      // justify-content: space-around;
     }
 
     .feature {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 80%;
-      height: 40%;
-      margin-bottom: 2rem;
-      padding: 3rem;
-      border: 2px solid black;
+      height: 300px;
+      width: 50%;
+      padding: 2rem;
+      border-top: 1px solid @color-active;
+      border-bottom: 1px solid @color-active;
 
       @media (min-width: 768px) {
+        height: 40%;
+        padding: 2rem;
+        border-top: 1px solid @color-active;
+        border-bottom: 1px solid @color-active;
         width: 40%;
-        height: 25vh;
+        height: 150px;
+      }
+
+      img {
+        padding: 5rem;
+        @media (min-width: 768px) {
+          padding: 10rem;
+        }
       }
 
       h2 {
         font-family: @font-main;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
 
       p {
         font-family: @font-text;
+        font-size: 1.6rem;
         padding: 2rem;
       }
+    }
+  }
+
+  .feature:nth-child(1) {
+    background-color: @color-active;
+    color: @color-info;
+    border-radius: 5px;
+    order: 1;
+  }
+
+  .feature:nth-child(2) {
+    order: 2;
+  }
+
+  .feature:nth-child(3) {
+    order: 4;
+
+    @media (min-width: 768px) {
+      order: 3;
+    }
+  }
+
+  .feature:nth-child(4) {
+    order: 3;
+    background-color: @color-active;
+    color: @color-info;
+    border-radius: 5px;
+
+    @media (min-width: 768px) {
+      order: 4;
     }
   }
 }

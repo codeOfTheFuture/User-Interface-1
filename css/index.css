@@ -143,13 +143,6 @@ table {
   top: 0;
   left: 0;
   z-index: 1;
-  font-family: 'Lato', sans-serif;
-  font-size: 2.6rem;
-}
-@media (min-width: 768px) {
-  .navbar {
-    font-size: 18rem;
-  }
 }
 .navbar .toggle {
   position: absolute;
@@ -246,7 +239,7 @@ table {
 }
 .navbar .nav > div {
   background: #1b98e0;
-  opacity: 0.95;
+  opacity: 0.98;
   border-radius: 50%;
   width: 200vw;
   height: 200vw;
@@ -296,23 +289,26 @@ table {
 }
 .navbar .nav > div > div ul li {
   list-style: none;
-  font-size: 1.5em;
-  padding: 1em;
+  padding: 3rem;
 }
 @media (min-width: 768px) {
   .navbar .nav > div > div ul li {
-    padding: 0;
     height: 100%;
-    font-size: 1.4rem;
+    padding: 0;
   }
 }
 .navbar .nav > div > div ul li a {
-  color: #13293d;
+  font-size: 3.8rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #e8f1f2;
   text-decoration: none;
   transition: color 0.5s ease;
 }
 @media (min-width: 768px) {
   .navbar .nav > div > div ul li a {
+    font-size: 1.8rem;
+    font-weight: normal;
     padding: 0 2rem;
     color: #e8f1f2;
   }
@@ -345,18 +341,25 @@ table {
   align-items: center;
   justify-content: center;
 }
-.section-home .container .main-heading {
+.section-home .container .logo {
+  display: flex;
+  align-items: center;
+}
+.section-home .container .logo .main-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.8rem;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
   margin: 5rem 0;
 }
 .section-home .container .secondary-heading {
   font-family: 'Lato', sans-serif;
-  font-size: 3.2rem;
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #13293d;
   text-align: center;
   margin: 3rem 0;
 }
@@ -380,17 +383,35 @@ table {
   background-color: #e8f1f2;
   color: #13293d;
 }
+.section-features {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(232, 241, 242, 0.85), #e8f1f2);
+}
+.section-features:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .section-features .container {
   max-width: 80%;
   margin: auto;
   overflow: hidden;
   padding-top: 8rem;
-  font-size: 1.6rem;
   padding: 4rem 0;
 }
 .section-features .container h1 {
   font-family: 'Lato', sans-serif;
-  font-size: 2.4rem;
+  font-size: 3.6rem;
+  font-weight: bold;
   margin: 4rem 0;
   text-align: center;
 }
@@ -404,32 +425,90 @@ table {
   .section-features .container .features {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 }
 .section-features .container .features .feature {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
-  height: 40%;
-  margin-bottom: 2rem;
-  padding: 3rem;
-  border: 2px solid black;
+  height: 300px;
+  width: 50%;
+  padding: 2rem;
+  border-top: 1px solid #247ba0;
+  border-bottom: 1px solid #247ba0;
 }
 @media (min-width: 768px) {
   .section-features .container .features .feature {
+    height: 40%;
+    padding: 2rem;
+    border-top: 1px solid #247ba0;
+    border-bottom: 1px solid #247ba0;
     width: 40%;
-    height: 25vh;
+    height: 150px;
+  }
+}
+.section-features .container .features .feature img {
+  padding: 5rem;
+}
+@media (min-width: 768px) {
+  .section-features .container .features .feature img {
+    padding: 10rem;
   }
 }
 .section-features .container .features .feature h2 {
   font-family: 'Lato', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 .section-features .container .features .feature p {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
   padding: 2rem;
+}
+.section-features .container .feature:nth-child(1) {
+  background-color: #247ba0;
+  color: #e8f1f2;
+  border-radius: 5px;
+  order: 1;
+}
+.section-features .container .feature:nth-child(2) {
+  order: 2;
+}
+.section-features .container .feature:nth-child(3) {
+  order: 4;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(3) {
+    order: 3;
+  }
+}
+.section-features .container .feature:nth-child(4) {
+  order: 3;
+  background-color: #247ba0;
+  color: #e8f1f2;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(4) {
+    order: 4;
+  }
+}
+.section-about {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(232, 241, 242, 0.85), #e8f1f2);
+}
+.section-about:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .section-about .container {
   max-width: 80%;
@@ -452,6 +531,8 @@ table {
 .section-about .container h1 {
   font-family: 'Lato', sans-serif;
   font-size: 3.6rem;
+  font-weight: bold;
+  color: #13293d;
 }
 @media (min-width: 768px) {
   .section-about .container h1 {
@@ -469,6 +550,7 @@ table {
     display: flex;
     flex-direction: row;
     height: 100%;
+    margin-top: 4rem;
   }
 }
 .section-about .container .about .tabs {
@@ -490,13 +572,16 @@ table {
   padding: 1rem;
   margin: 1rem 1.4rem;
   font-size: 1.8rem;
+  border-radius: 5px;
 }
 .section-about .container .about .tabs .tab-link-selected {
-  border: 1px solid #13293d;
+  background-color: #247ba0;
+  color: #e8f1f2;
 }
 .section-about .container .about .tab-items {
-  width: 75%;
-  padding: 2rem 0;
+  width: 100%;
+  height: 50%;
+  margin: 0 2rem;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items {
@@ -504,29 +589,34 @@ table {
     margin-bottom: 8rem;
   }
 }
-.section-about .container .about .tab-items .tab-item {
-  padding: 2rem 0;
-}
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item {
     display: none;
   }
 }
 .section-about .container .about .tab-items .tab-item .img {
-  margin: 1.7rem 0;
-  width: 75px;
-  height: 75px;
+  margin: 2rem 0;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: grey;
 }
 .section-about .container .about .tab-items .tab-item h2 {
   font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
   padding: 2rem 0;
+  border-top: 1px solid #247ba0;
+  border-bottom: 1px solid #247ba0;
+  border-right: 1px solid #247ba0;
+  width: 100%;
 }
 .section-about .container .about .tab-items .tab-item p {
   font-family: 'Roboto', sans-serif;
+  line-height: 2rem;
   padding: 2rem;
-  border: 1px solid #13293d;
+  border-bottom: 1px solid #247ba0;
+  border-left: 1px solid #247ba0;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item-selected {
