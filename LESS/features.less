@@ -17,7 +17,7 @@
     height: 100%;
     z-index: -1;
     background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -31,11 +31,12 @@
     font-family: @font-main;
     font-size: 3.6rem;
     font-weight: bold;
-    margin: 4rem 0;
+    margin: 6rem 0;
     text-align: center;
   }
   .features {
     .flex-column-center;
+    margin: auto;
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -46,38 +47,42 @@
     .feature {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      height: 300px;
-      width: 50%;
-      padding: 2rem;
-      border-top: 1px solid @color-active;
-      border-bottom: 1px solid @color-active;
+      height: 30vh;
+      width: 30vw;
+      padding: 4rem 2rem;
+      margin: 2rem 0;
+      border-radius: 5px;
 
       @media (min-width: 768px) {
-        height: 40%;
-        padding: 2rem;
-        border-top: 1px solid @color-active;
-        border-bottom: 1px solid @color-active;
-        width: 40%;
-        height: 150px;
+        height: 30vh;
+        padding: 2rem 1rem;
+        margin: 2rem;
+        width: 30vw;
+        justify-content: center;
+        align-content: center;
       }
 
       img {
-        padding: 5rem;
-        @media (min-width: 768px) {
-          padding: 10rem;
-        }
+        max-width: 100%;
+        height: auto;
       }
 
       h2 {
         font-family: @font-main;
-        font-size: 1.8rem;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
       }
 
       p {
+        background-color: @color-info;
+        color: @color-secondary;
         font-family: @font-text;
         font-size: 1.6rem;
-        padding: 2rem;
+        line-height: 2.4rem;
+        border-radius: 5px;
+        padding: 1.5rem;
       }
     }
   }
@@ -85,18 +90,32 @@
   .feature:nth-child(1) {
     background-color: @color-active;
     color: @color-info;
-    border-radius: 5px;
     order: 1;
+
+    @media (min-width: 768px) {
+    }
   }
 
   .feature:nth-child(2) {
+    padding: 0;
+    border-top: 1px solid @color-active;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     order: 2;
+
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
   }
 
   .feature:nth-child(3) {
+    border-bottom: 1px solid @color-active;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     order: 4;
 
     @media (min-width: 768px) {
+      padding: 3rem;
       order: 3;
     }
   }
@@ -105,7 +124,6 @@
     order: 3;
     background-color: @color-active;
     color: @color-info;
-    border-radius: 5px;
 
     @media (min-width: 768px) {
       order: 4;
