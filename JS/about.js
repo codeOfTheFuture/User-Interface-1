@@ -6,6 +6,8 @@ class TabLink {
     this.tabItem = new TabItem(this.item);
 
     this.link.addEventListener('click', () => this.selected());
+
+    this.link.addEventListener('click', () => this.tabInterval());
   }
 
   selected() {
@@ -40,5 +42,70 @@ class TabItem {
 
 const links = document.querySelectorAll('.tab-link').forEach(link => {
   const tabLink = new TabLink(link);
-  console.log(tabLink);
 });
+
+function tabInterval() {
+  setInterval(() => {
+    let currLink, currIndex, currItem, currItemIndex;
+
+    const links = document
+      .querySelectorAll('.tab-link')
+      .forEach((link, index) => {
+        if (Array.from(link.classList).includes('tab-link-selected')) {
+          currLink = link;
+          currIndex = index;
+        }
+      });
+
+    const tabs = document
+      .querySelectorAll('.tab-item')
+      .forEach((item, index) => {
+        if (Array.from(item.classList).includes('tab-item-selected')) {
+          currItem = item;
+          currItemIndex = index;
+        }
+      });
+
+    const linksLength = document.querySelectorAll('.tab-link').length,
+      itemsLength = document.querySelectorAll('.tab-item').length;
+
+    // console.log(linksLength);
+
+    if (currIndex < linksLength - 1 && currItemIndex < itemsLength - 1) {
+      let nextIndex = currIndex + 1,
+        nextItemIndex = currItemIndex + 1;
+
+      console.log(nextIndex);
+
+      const nextLink = Array.from(document.querySelectorAll('.tab-link')),
+        nextItem = Array.from(document.querySelectorAll('.tab-item'));
+
+      console.log(currLink);
+      console.log(nextLink[nextIndex]);
+
+      currLink.classList.remove('tab-link-selected');
+
+      currItem.classList.remove('tab-item-selected');
+
+      nextLink[nextIndex].classList.add('tab-link-selected');
+
+      nextItem[nextItemIndex].classList.add('tab-item-selected');
+    } else {
+      let nextIndex = 0,
+        nextItemIndex = 0;
+
+      const nextLink = Array.from(document.querySelectorAll('.tab-link')),
+        nextItem = Array.from(document.querySelectorAll('.tab-item'));
+
+      currLink.classList.remove('tab-link-selected');
+
+      currItem.classList.remove('tab-item-selected');
+
+      nextLink[nextIndex].classList.add('tab-link-selected');
+
+      nextItem[nextItemIndex].classList.add('tab-item-selected');
+    }
+  }, 5000);
+}
+
+window.addEventListener('load', () => this.tabInterval());
