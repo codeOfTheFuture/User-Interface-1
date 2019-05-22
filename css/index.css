@@ -352,11 +352,14 @@ table {
   justify-content: center;
   font-size: 2.8rem;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
   margin: 5rem 0;
 }
 .section-home .container .secondary-heading {
   font-family: 'Lato', sans-serif;
-  font-size: 3.2rem;
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: #13293d;
   text-align: center;
   margin: 3rem 0;
 }
@@ -380,6 +383,24 @@ table {
   background-color: #e8f1f2;
   color: #13293d;
 }
+.section-features {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(232, 241, 242, 0.85), #e8f1f2);
+}
+.section-features:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .section-features .container {
   max-width: 80%;
   margin: auto;
@@ -390,7 +411,8 @@ table {
 .section-features .container h1 {
   font-family: 'Lato', sans-serif;
   font-size: 3.6rem;
-  margin: 6rem 0;
+  font-weight: bold;
+  margin: 4rem 0;
   text-align: center;
 }
 .section-features .container .features {
@@ -409,18 +431,28 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 40%;
+  height: 300px;
+  width: 50%;
   padding: 2rem;
-  border: 1px solid #247ba0;
-  border-radius: 5px;
+  border-top: 1px solid #247ba0;
+  border-bottom: 1px solid #247ba0;
 }
 @media (min-width: 768px) {
   .section-features .container .features .feature {
+    height: 40%;
+    padding: 2rem;
+    border-top: 1px solid #247ba0;
+    border-bottom: 1px solid #247ba0;
     width: 40%;
     height: 150px;
   }
+}
+.section-features .container .features .feature img {
+  padding: 5rem;
+}
+@media (min-width: 768px) {
   .section-features .container .features .feature img {
-    padding: 5rem;
+    padding: 10rem;
   }
 }
 .section-features .container .features .feature h2 {
@@ -436,11 +468,47 @@ table {
   background-color: #247ba0;
   color: #e8f1f2;
   border-radius: 5px;
+  order: 1;
+}
+.section-features .container .feature:nth-child(2) {
+  order: 2;
+}
+.section-features .container .feature:nth-child(3) {
+  order: 4;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(3) {
+    order: 3;
+  }
 }
 .section-features .container .feature:nth-child(4) {
+  order: 3;
   background-color: #247ba0;
   color: #e8f1f2;
   border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(4) {
+    order: 4;
+  }
+}
+.section-about {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(232, 241, 242, 0.85), #e8f1f2);
+}
+.section-about:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .section-about .container {
   max-width: 80%;
@@ -463,6 +531,8 @@ table {
 .section-about .container h1 {
   font-family: 'Lato', sans-serif;
   font-size: 3.6rem;
+  font-weight: bold;
+  color: #13293d;
 }
 @media (min-width: 768px) {
   .section-about .container h1 {
