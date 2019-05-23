@@ -17,7 +17,7 @@
     height: 100%;
     z-index: -1;
     background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -41,7 +41,7 @@
 
   .secondary-heading {
     font-family: @font-main;
-    font-size: 3.6rem;
+    font-size: @large-text;
     font-weight: bold;
     color: @color-secondary;
     text-align: center;
@@ -49,8 +49,10 @@
   }
 
   p {
-    font-size: 1.6rem;
     font-family: @font-text;
+    font-size: @small-text;
+    line-height: @line-height;
+    color: @color-secondary;
     margin: 3rem 2rem;
   }
 
