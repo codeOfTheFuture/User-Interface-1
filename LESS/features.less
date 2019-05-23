@@ -1,6 +1,6 @@
 // Features Page Styles
 .section-features {
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-image: linear-gradient(
     to bottom right,
@@ -25,45 +25,46 @@
 
 .section-features .container {
   .container-styles;
-
-  padding: 4rem 0;
   h1 {
     font-family: @font-main;
     font-size: 3.6rem;
     font-weight: bold;
-    margin: 6rem 0;
     text-align: center;
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      margin-top: 4rem;
+    }
   }
   .features {
     .flex-column-center;
-    margin: auto;
 
     @media (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
-      // justify-content: space-around;
+      margin-top: 4rem;
     }
 
     .feature {
       display: flex;
       flex-direction: column;
-      height: 30vh;
-      width: 30vw;
-      padding: 4rem 2rem;
+      height: 200px;
+      width: 300px;
       margin: 2rem 0;
       border-radius: 5px;
 
       @media (min-width: 768px) {
-        height: 30vh;
-        padding: 2rem 1rem;
-        margin: 2rem;
-        width: 30vw;
+        padding: 0 1rem;
+        margin: 2rem 4rem;
+        width: 300px;
+        height: 200px;
         justify-content: center;
         align-content: center;
       }
 
       img {
-        max-width: 100%;
+        max-width: 300px;
         height: auto;
       }
 
@@ -71,8 +72,14 @@
         font-family: @font-main;
         font-size: 2rem;
         font-weight: bold;
+        margin: 2rem 0;
         padding: 0 2rem;
-        margin-bottom: 2rem;
+
+        @media (min-width: 768px) {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          padding: 0.5rem;
+        }
       }
 
       p {
@@ -82,7 +89,6 @@
         font-size: 1.6rem;
         line-height: 2.4rem;
         border-radius: 5px;
-        padding: 1.5rem;
       }
     }
   }
@@ -91,8 +97,18 @@
     background-color: @color-active;
     color: @color-info;
     order: 1;
+    padding: 0 1rem;
 
     @media (min-width: 768px) {
+      margin: 0;
+    }
+
+    p {
+      padding: 2rem;
+
+      @media (min-width: 768px) {
+        padding-bottom: 2.5rem;
+      }
     }
   }
 
@@ -104,7 +120,8 @@
     order: 2;
 
     @media (min-width: 768px) {
-      padding: 3rem;
+      padding: 0;
+      margin-right: 2rem;
     }
   }
 
@@ -113,9 +130,12 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     order: 4;
+    margin-bottom: 4rem;
 
     @media (min-width: 768px) {
-      padding: 3rem;
+      margin-left: 0;
+      margin-bottom: 2rem;
+      padding: 0;
       order: 3;
     }
   }
@@ -124,9 +144,24 @@
     order: 3;
     background-color: @color-active;
     color: @color-info;
+    padding: 1rem;
 
     @media (min-width: 768px) {
+      padding: 0 1rem;
+      margin: 0;
       order: 4;
+    }
+
+    h2 {
+      @media (min-width: 768px) {
+      }
+    }
+
+    p {
+      padding: 1rem;
+      @media (min-width: 768px) {
+        padding: 1rem;
+      }
     }
   }
 }

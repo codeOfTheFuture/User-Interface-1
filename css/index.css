@@ -129,7 +129,6 @@ table {
 .container-styles {
   max-width: 80%;
   margin: auto;
-  overflow: hidden;
   padding-top: 8rem;
 }
 .flex-column-center {
@@ -334,7 +333,6 @@ table {
 .section-home .container {
   max-width: 80%;
   margin: auto;
-  overflow: hidden;
   padding-top: 8rem;
   display: flex;
   flex-direction: column;
@@ -384,7 +382,7 @@ table {
   color: #13293d;
 }
 .section-features {
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-image: linear-gradient(to bottom right, rgba(232, 241, 242, 0.85), #e8f1f2);
 }
@@ -404,59 +402,69 @@ table {
 .section-features .container {
   max-width: 80%;
   margin: auto;
-  overflow: hidden;
   padding-top: 8rem;
-  padding: 4rem 0;
 }
 .section-features .container h1 {
   font-family: 'Lato', sans-serif;
   font-size: 3.6rem;
   font-weight: bold;
-  margin: 6rem 0;
   text-align: center;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .section-features .container h1 {
+    margin-bottom: 0;
+    margin-top: 4rem;
+  }
 }
 .section-features .container .features {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
 }
 @media (min-width: 768px) {
   .section-features .container .features {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 4rem;
   }
 }
 .section-features .container .features .feature {
   display: flex;
   flex-direction: column;
-  height: 30vh;
-  width: 30vw;
-  padding: 4rem 2rem;
+  height: 200px;
+  width: 300px;
   margin: 2rem 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
   .section-features .container .features .feature {
-    height: 30vh;
-    padding: 2rem 1rem;
-    margin: 2rem;
-    width: 30vw;
+    padding: 0 1rem;
+    margin: 2rem 4rem;
+    width: 300px;
+    height: 200px;
     justify-content: center;
     align-content: center;
   }
 }
 .section-features .container .features .feature img {
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
 }
 .section-features .container .features .feature h2 {
   font-family: 'Lato', sans-serif;
   font-size: 2rem;
   font-weight: bold;
+  margin: 2rem 0;
   padding: 0 2rem;
-  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .section-features .container .features .feature h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
 }
 .section-features .container .features .feature p {
   background-color: #e8f1f2;
@@ -465,12 +473,25 @@ table {
   font-size: 1.6rem;
   line-height: 2.4rem;
   border-radius: 5px;
-  padding: 1.5rem;
 }
 .section-features .container .feature:nth-child(1) {
   background-color: #247ba0;
   color: #e8f1f2;
   order: 1;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(1) {
+    margin: 0;
+  }
+}
+.section-features .container .feature:nth-child(1) p {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(1) p {
+    padding-bottom: 2.5rem;
+  }
 }
 .section-features .container .feature:nth-child(2) {
   padding: 0;
@@ -481,7 +502,8 @@ table {
 }
 @media (min-width: 768px) {
   .section-features .container .feature:nth-child(2) {
-    padding: 3rem;
+    padding: 0;
+    margin-right: 2rem;
   }
 }
 .section-features .container .feature:nth-child(3) {
@@ -489,10 +511,13 @@ table {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   order: 4;
+  margin-bottom: 4rem;
 }
 @media (min-width: 768px) {
   .section-features .container .feature:nth-child(3) {
-    padding: 3rem;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    padding: 0;
     order: 3;
   }
 }
@@ -500,10 +525,21 @@ table {
   order: 3;
   background-color: #247ba0;
   color: #e8f1f2;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .section-features .container .feature:nth-child(4) {
+    padding: 0 1rem;
+    margin: 0;
     order: 4;
+  }
+}
+.section-features .container .feature:nth-child(4) p {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .section-features .container .feature:nth-child(4) p {
+    padding: 1rem;
   }
 }
 .section-about {
@@ -527,7 +563,6 @@ table {
 .section-about .container {
   max-width: 80%;
   margin: auto;
-  overflow: hidden;
   padding-top: 8rem;
   display: flex;
   flex-direction: column;
@@ -537,7 +572,6 @@ table {
 }
 @media (min-width: 768px) {
   .section-about .container {
-    flex-direction: row;
     justify-content: flex-start;
     height: 100vh;
   }
@@ -549,9 +583,6 @@ table {
   color: #13293d;
 }
 @media (min-width: 768px) {
-  .section-about .container h1 {
-    height: 100%;
-  }
 }
 .section-about .container .about {
   display: flex;
@@ -563,8 +594,6 @@ table {
   .section-about .container .about {
     display: flex;
     flex-direction: row;
-    height: 100%;
-    margin-top: 4rem;
   }
 }
 .section-about .container .about .tabs {
@@ -578,13 +607,13 @@ table {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-top: 6rem;
   }
 }
 .section-about .container .about .tabs .tab-link {
   cursor: pointer;
   padding: 1rem;
-  margin: 1rem 1.4rem;
+  margin: 1.4rem;
   font-size: 1.8rem;
   border-radius: 5px;
 }
@@ -593,27 +622,39 @@ table {
   color: #e8f1f2;
 }
 .section-about .container .about .tab-items {
-  width: 100%;
+  width: 90%;
   height: 50%;
-  margin: 0 2rem;
+  margin: 4rem 2rem;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items {
+    width: 100%;
     padding: 0;
-    margin-bottom: 8rem;
+    margin-top: 0;
+    margin-bottom: 9rem;
   }
+}
+.section-about .container .about .tab-items .tab-item {
+  margin: 4rem 0;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item {
     display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin: 0;
   }
 }
 .section-about .container .about .tab-items .tab-item .img {
   margin: 2rem 0;
-  max-width: 100px;
+  max-width: 110px;
   height: auto;
   border-radius: 50%;
-  background: grey;
+}
+.section-about .container .about .tab-items .tab-item .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 .section-about .container .about .tab-items .tab-item h2 {
   font-family: 'Lato', sans-serif;
@@ -635,6 +676,8 @@ table {
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item-selected {
     display: block;
+    opacity: 1;
+    transition: opacity 1s ease;
   }
 }
 html,
