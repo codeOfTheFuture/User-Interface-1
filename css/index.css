@@ -304,6 +304,9 @@ table {
   text-decoration: none;
   transition: color 0.5s ease;
 }
+.navbar .nav > div > div ul li a:hover {
+  color: #006494;
+}
 @media (min-width: 768px) {
   .navbar .nav > div > div ul li a {
     font-size: 1.8rem;
@@ -326,7 +329,7 @@ table {
   height: 100%;
   z-index: -1;
   background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -362,8 +365,10 @@ table {
   margin: 3rem 0;
 }
 .section-home .container p {
-  font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #13293d;
   margin: 3rem 2rem;
 }
 .section-home .container .button {
@@ -414,7 +419,7 @@ table {
 @media (min-width: 768px) {
   .section-features .container h1 {
     margin-bottom: 0;
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 }
 .section-features .container .features {
@@ -471,11 +476,11 @@ table {
   color: #13293d;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-  line-height: 2.4rem;
+  line-height: 2rem;
   border-radius: 5px;
 }
 .section-features .container .feature:nth-child(1) {
-  background-color: #247ba0;
+  background-color: #006494;
   color: #e8f1f2;
   order: 1;
   padding: 0 1rem;
@@ -495,9 +500,6 @@ table {
 }
 .section-features .container .feature:nth-child(2) {
   padding: 0;
-  border-top: 1px solid #247ba0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   order: 2;
 }
 @media (min-width: 768px) {
@@ -507,9 +509,6 @@ table {
   }
 }
 .section-features .container .feature:nth-child(3) {
-  border-bottom: 1px solid #247ba0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   order: 4;
   margin-bottom: 4rem;
 }
@@ -523,7 +522,7 @@ table {
 }
 .section-features .container .feature:nth-child(4) {
   order: 3;
-  background-color: #247ba0;
+  background-color: #006494;
   color: #e8f1f2;
   padding: 1rem;
 }
@@ -556,7 +555,7 @@ table {
   height: 100%;
   z-index: -1;
   background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -568,7 +567,6 @@ table {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
 }
 @media (min-width: 768px) {
   .section-about .container {
@@ -581,8 +579,6 @@ table {
   font-size: 3.6rem;
   font-weight: bold;
   color: #13293d;
-}
-@media (min-width: 768px) {
 }
 .section-about .container .about {
   display: flex;
@@ -618,7 +614,7 @@ table {
   border-radius: 5px;
 }
 .section-about .container .about .tabs .tab-link-selected {
-  background-color: #247ba0;
+  background-color: #006494;
   color: #e8f1f2;
 }
 .section-about .container .about .tab-items {
@@ -658,20 +654,21 @@ table {
 }
 .section-about .container .about .tab-items .tab-item h2 {
   font-family: 'Lato', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   padding: 2rem 0;
-  border-top: 1px solid #247ba0;
-  border-bottom: 1px solid #247ba0;
-  border-right: 1px solid #247ba0;
+  border-top: 1px solid #006494;
+  border-bottom: 1px solid #006494;
+  border-right: 1px solid #006494;
   width: 100%;
 }
 .section-about .container .about .tab-items .tab-item p {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
   line-height: 2rem;
   padding: 2rem;
-  border-bottom: 1px solid #247ba0;
-  border-left: 1px solid #247ba0;
+  border-bottom: 1px solid #006494;
+  border-left: 1px solid #006494;
 }
 @media (min-width: 768px) {
   .section-about .container .about .tab-items .tab-item-selected {

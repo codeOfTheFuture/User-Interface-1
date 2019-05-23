@@ -17,7 +17,7 @@
     height: 100%;
     z-index: -1;
     background-image: url(../imgs/blue-close-up-computer-keyboard.jpg);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -26,23 +26,17 @@
 .section-about .container {
   .container-styles;
   .flex-column-center;
-  font-size: 1.6rem;
 
   @media (min-width: 768px) {
-    // flex-direction: row;
     justify-content: flex-start;
     height: 100vh;
   }
 
   h1 {
     font-family: @font-main;
-    font-size: 3.6rem;
+    font-size: @large-text;
     font-weight: bold;
     color: @color-secondary;
-
-    @media (min-width: 768px) {
-      // height: 100%;
-    }
   }
 
   .about {
@@ -51,8 +45,6 @@
     @media (min-width: 768px) {
       display: flex;
       flex-direction: row;
-      // height: 100%;
-      // margin-top: 1rem;
     }
 
     .tabs {
@@ -115,7 +107,7 @@
 
         h2 {
           font-family: @font-main;
-          font-size: 1.8rem;
+          font-size: @medium-text;
           font-weight: bold;
           padding: 2rem 0;
           border-top: 1px solid @color-active;
@@ -126,7 +118,8 @@
 
         p {
           font-family: @font-text;
-          line-height: 2rem;
+          font-size: @small-text;
+          line-height: @line-height;
           padding: 2rem;
           border-bottom: 1px solid @color-active;
           border-left: 1px solid @color-active;
